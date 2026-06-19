@@ -1,0 +1,46 @@
+class Animal {
+
+    public void makeSound() {
+        System.out.println("Some animal sound");
+    }
+}
+
+class Dog extends Animal {
+
+    @Override
+    public void makeSound() {
+        System.out.println("Dog: Bhau Bhau");
+    }
+}
+
+class Cat extends Animal {
+
+    @Override
+    public void makeSound() {
+        System.out.println("Cat: Meow Meow");
+    }
+}
+
+class Cow extends Animal {
+
+    @Override
+    public void makeSound() {
+        System.out.println("Cow: Moo Moo");
+    }
+}
+
+public class AnimalSounds {
+
+    public static void main(String[] args) {
+
+        Animal[] animals = {
+                new Dog(),
+                new Cat(),
+                new Cow()
+        };
+
+        for (Animal a : animals) {
+            a.makeSound();
+        }
+    }
+}
